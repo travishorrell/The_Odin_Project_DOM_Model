@@ -4,6 +4,7 @@ const addH3Tag = document.createElement('h3');
 const addPinkDiv = document.createElement('div');
 const h1 = document.createElement('h1');
 const paragraphTag = document.createElement('p');
+const btn = document.querySelectorAll('button');
 
 
 
@@ -20,6 +21,20 @@ addPinkDiv.style.border = "2px solid black";
 h1.textContent = "I'm in a div";
 paragraphTag.textContent = "ME TOO";
 
+/*
+btn.onclick = () => alert("Hello World From JavaScript");
+
+btn.addEventListener('click', function (e) 
+{
+    console.log(e);
+})
+*/
+
+btn.forEach((button) =>{
+    button.addEventListener('click', () => {
+        alert(button.id);
+    })
+})
 
 
 //Inserting the Tags into the HTML page
@@ -28,4 +43,6 @@ container.appendChild(addH3Tag);
 container.append(addPinkDiv);
 addPinkDiv.appendChild(h1);
 addPinkDiv.appendChild(paragraphTag);
+
+
 
