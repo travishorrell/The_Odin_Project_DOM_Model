@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="JavaScript/IndexJavascript.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.3/JsBarcode.all.min.js"></script>
     <title>Changing the DOM</title>
 </head>
 <!-- The DOM -->
@@ -19,6 +20,12 @@
         <button id="btn2">Click Me button 2</button>
         <button id="btn3">Click Me button 3</button>
         <button id="clearButton">Clear</button>
+    </div>
+
+    <div class="content">
+      <input type="text" id="text">
+      <svg id="barcode"></svg>
+      <button id="barcodeButton">Generate</button>
     </div>
   </body>
 </html>

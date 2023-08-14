@@ -38,6 +38,15 @@ btn.forEach((button) =>{
     })
 })
 */
+
+//Testing the bbarcode genetor
+
+function MakeBarcode ()
+{
+    let text = document.getElementById("text").value;
+    JsBarcode("#barcode", text);
+}
+
 btn.forEach((button) => {
     button.addEventListener('click', () => {
         if(button.id == "clearButton")
@@ -45,7 +54,11 @@ btn.forEach((button) => {
             paragraphTag.textContent = "You Clicked the Clear button";
             alert("We cleared the information for you and printed to the screen");
         }
-        else
+        else if(button.id == "barcodeButton")
+        {
+           MakeBarcode();
+        }
+        else 
         {
             alert("You clicked " + button.id);
         }
