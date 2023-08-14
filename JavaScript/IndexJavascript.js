@@ -8,6 +8,7 @@ const btn = document.querySelectorAll('button');
 
 
 
+
 //Changing and adding tags to the DOM
 addedRedPar.style.color = 'red';
 addedRedPar.textContent = "Hi i'm Red";
@@ -30,9 +31,24 @@ btn.addEventListener('click', function (e)
 })
 */
 
+/*
 btn.forEach((button) =>{
     button.addEventListener('click', () => {
         alert(button.id);
+    })
+})
+*/
+btn.forEach((button) => {
+    button.addEventListener('click', () => {
+        if(button.id == "clearButton")
+        {
+            paragraphTag.textContent = "You Clicked the Clear button";
+            alert("We cleared the information for you and printed to the screen");
+        }
+        else
+        {
+            alert("You clicked " + button.id);
+        }
     })
 })
 
