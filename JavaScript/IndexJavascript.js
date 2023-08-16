@@ -40,6 +40,7 @@ btn.forEach((button) =>{
 */
 
 //Testing the bbarcode genetor
+//try github page https://davidshimjs.github.io/qrcodejs/
 
 function MakeBarcode ()
 {
