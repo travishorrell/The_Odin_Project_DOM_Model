@@ -48,6 +48,28 @@ function MakeBarcode ()
     JsBarcode("#barcode", text);
 }
 
+function changeFontSize(delta) {
+    var tags = document.querySelectorAll('body');
+    for (i = 0; i < tags.length; i++) {
+      if (tags[i].style.fontSize) {
+        var s = parseInt(tags[i].style.fontSize.replace("px", ""));
+      } else {
+        var s = 12;
+      } if (s != max) {
+        s += delta;
+      }
+      tags[i].style.fontSize = s + "px"
+    }
+  }
+  
+  function increaseFontSize() {
+    changeFontSize(1);
+  }
+  
+  function decreaseFontSize() {
+    changeFontSize(-1);
+  }
+
 btn.forEach((button) => {
     button.addEventListener('click', () => {
         if(button.id == "clearButton")
@@ -59,7 +81,15 @@ btn.forEach((button) => {
         {
            MakeBarcode();
         }
-        else 
+        else if(button.id == "negButton")
+        {
+            decreaseFontSize();
+        }
+        else if(button.id == "posButton")
+        {
+            increaseFontSize();
+        }
+        else
         {
             alert("You clicked " + button.id);
         }
