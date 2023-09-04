@@ -79,7 +79,7 @@ btn.forEach((button) => {
         }
         else if(button.id == "barcodeButton")
         {
-           MakeBarcode();
+            MakeBarcode();
         }
         else if(button.id == "negButton")
         {
